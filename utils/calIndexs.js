@@ -1,4 +1,3 @@
-/*******************Functions*******************/
 var clipper = function(image){
     return image.clip(region);
 };
@@ -9,7 +8,6 @@ var renameS2 = function(image){
     return image.select(visbands).rename(newbands);
 };
 
-/**********Calculate VIs**********/
 var calNDVI = function(image){
     var ndvi = image.normalizedDifference(['NIR', 'R']).rename('NDVI');
     return image.addBands(ndvi).float();
@@ -104,9 +102,7 @@ var calGLCM = function(image){
     return image.addBands(glcm.rename('GLCM'));
 };
 
-
-/******************Exports******************/
-exports.clipper = function(image){
+exports.clip = function(image){
     return image.clip(region);
 };
 exports.renameS2 = renameS2;
