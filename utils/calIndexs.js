@@ -1,7 +1,3 @@
-var clipper = function(image){
-    return image.clip(region);
-};
-
 var renameS2 = function(image){
     var visbands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B11', 'B12'];
     var newbands = ['B', 'G', 'R', 'edgeR1', 'edgeR2', 'edgeR3', 'NIR', 'nNIR', 'WATER', 'SWIR1', 'SWIR2'];
@@ -102,9 +98,6 @@ var calGLCM = function(image){
     return image.addBands(glcm.rename('GLCM'));
 };
 
-exports.clip = function(image){
-    return image.clip(region);
-};
 exports.renameS2 = renameS2;
 exports.calNDVI = calNDVI;
 exports.calNDVIedge1 = calNDVIedge1;
