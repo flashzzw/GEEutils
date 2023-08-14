@@ -106,7 +106,9 @@ var calGLCM = function(image){
 
 
 /******************Exports******************/
-exports.clipper = clipper;
+exports.clipper = function(image){
+    return image.clip(region);
+};
 exports.renameS2 = renameS2;
 exports.calNDVI = calNDVI;
 exports.calNDVIedge1 = calNDVIedge1;
