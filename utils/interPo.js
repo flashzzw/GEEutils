@@ -191,3 +191,6 @@ exports.collection = function(originalCollection, n, days){
     
     return regularCol;
 };
+exports.clip = function(image){
+  return image.clip(region);
+};
