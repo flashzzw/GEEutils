@@ -1,0 +1,19 @@
+<script>
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+var buttons = 0;
+async function wait_loading() {
+    for (var i = 0; !buttons[5]; i) {
+        await sleep(250);
+        buttons = document.getElementsByClassName("hope-anchor");
+        imgs = document.getElementsByClassName("hope-image");
+    }
+}
+async function change_button() {
+    await wait_loading();
+    buttons[0].href = buttons[0].href.replace("iina://weblink?url=","mpv-alist://");
+    imgs[1].src = "https://mpv.io/images/mpv-logo-128-0baae5aa.png";
+}
+change_button()
+</script>
